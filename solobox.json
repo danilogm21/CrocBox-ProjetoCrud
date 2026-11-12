@@ -1,0 +1,15 @@
+[
+    {
+        "usuario_id": 1,
+        "valor_Total": 24.90,
+        "status_Pedido": "Pendente",
+        "itens": [
+            {
+                "produtos_id": 1,
+                "nome_produto": "Solo Box",
+                "quantidadee": 1,
+                "preco_unidade": 24.90
+            }
+        ]
+    }
+]

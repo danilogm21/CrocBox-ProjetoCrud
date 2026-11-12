@@ -1,0 +1,15 @@
+[
+    {
+        "usuario_id": 1,
+        "valor_Total": 32.90,
+        "status_Pedido": "Pendente",
+        "itens": [
+            {
+                "produtos_id": 3,
+                "nome_produto": "Burguer Box",
+                "quantidadee": 1,
+                "preco_unidade": 32.90
+            }
+        ]
+    }
+]

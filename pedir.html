@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Monte seu pedido - Croc Box</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="pedir.css">
+</head>
+<body>
+  <header>
+    <img src="logo-semfundo.png" alt="Logo Croc Box">
+    <nav>
+      <a href="pecaagora.html" class="active">PEÇA AGORA</a>
+      <a href="login.html">ENTRAR</a>
+      <a href="criarconta.html">CRIAR CONTA</a>
+      <a href="meuspedidos.html">MEUS PEDIDOS</a>
+      <a href="carrinho.html">CARRINHO</a>
+      <a href="perfil.html">PERFIL</a>
+      <button id="btn-tema" class="btn-tema" aria-label="Alternar Tema">
+          <svg class="icone-sol" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icone-lua" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+    </nav>
+  </header>
+
+  <section class="titulo-carrinho-page">
+    <h1 id="titulo-box">Carregando...</h1>
+    <p class="descricao-box" id="descricao-box"></p>
+  </section>
+
+  <section class="secao-carrinho">
+    <div class="carrinho-container">
+      <div class="pedir-grid">
+
+        <div class="pedir-opcoes">
+
+          <div class="carrinho-card">
+            <h2 class="titulo-opcao">Escolha os molhos</h2>
+            <p class="texto-opcao" id="texto-molhos">Selecione seus molhos preferidos</p>
+            <div class="lista-molhos">
+              <button type="button" class="molho">Barbecue</button>
+              <button type="button" class="molho">Cheddar cremoso</button>
+              <button type="button" class="molho">Maionese da casa</button>
+              <button type="button" class="molho">Picante</button>
+              <button type="button" class="molho">Mostarda e mel</button>
+            </div>
+          </div>
+
+          <div class="carrinho-card">
+            <h2 class="titulo-opcao">Quer mais alguma coisa?</h2>
+            <p class="texto-opcao">Adicionais por unidade.</p>
+
+            <div class="linha-extra" data-id="5" data-nome="Batata Crinkle" data-preco="12.00">
+              <div><strong>Batata Crinkle</strong><small>+R$ 12,00</small></div>
+              <div class="seletor-quantidade">
+                <button type="button" class="btn-qtd btn-diminuir-extra">-</button>
+                <span class="qtd-extra">0</span>
+                <button type="button" class="btn-qtd btn-aumentar-extra">+</button>
+              </div>
+            </div>
+
+            <div class="linha-extra" data-id="6" data-nome="Refrigerante" data-preco="6.00">
+              <div><strong>Refrigerante</strong><small>+R$ 6,00</small></div>
+              <div class="seletor-quantidade">
+                <button type="button" class="btn-qtd btn-diminuir-extra">-</button>
+                <span class="qtd-extra">0</span>
+                <button type="button" class="btn-qtd btn-aumentar-extra">+</button>
+              </div>
+            </div>
+
+            <div class="linha-extra" data-id="7" data-nome="Molho Extra" data-preco="3.00">
+              <div><strong>Molho Extra</strong><small>+R$ 3,00</small></div>
+              <div class="seletor-quantidade">
+                <button type="button" class="btn-qtd btn-diminuir-extra">-</button>
+                <span class="qtd-extra">0</span>
+                <button type="button" class="btn-qtd btn-aumentar-extra">+</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="carrinho-card">
+            <h2 class="titulo-opcao">Observações</h2>
+            <div class="card-obs">
+              <input type="text" id="observacao" maxlength="140" placeholder="Observação (ex: sem picles)">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="carrinho-resumo">
+          <div class="resumo-card">
+            <h2>SEU PEDIDO</h2>
+
+            <div class="linhas-resumo">
+              <div class="linha-valor">
+                <span id="nome-resumo">Box</span>
+                <span id="preco-box">R$ 0,00</span>
+              </div>
+              <div class="linha-valor">
+                <span>Adicionais</span>
+                <span id="valor-adicionais">R$ 0,00</span>
+              </div>
+            </div>
+
+            <div class="linha-valor">
+              <span>Quantidade</span>
+              <div class="seletor-quantidade">
+                <button type="button" class="btn-qtd" id="btn-menos">-</button>
+                <span id="quantidade">1</span>
+                <button type="button" class="btn-qtd" id="btn-mais">+</button>
+              </div>
+            </div>
+
+            <div class="divisor-resumo"></div>
+
+            <div class="linha-total">
+              <span>TOTAL</span>
+              <span id="total-valor">R$ 0,00</span>
+            </div>
+
+            <!-- Botão para Baixar o JSON diretamente para o C# -->
+            <button type="button" class="btn-finalizar" id="btn-baixar-json">Finalizar e Baixar JSON</button>
+            <p class="aviso-pedir" id="aviso"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="rodape rodape-carrinho">
+    <img src="logo-semfundo.png" alt="Logo Croc Box">
+    <p>Frango frito extra crocante. Delivery.</p>
+  </footer>
+
+  <!-- Chamada para os scripts externos -->
+  <script src="script.js"></script>
+  <script src="pedir.js"></script>
+</body>
+</html>

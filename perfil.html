@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Seu Perfil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo-semfundo.png" alt="Logo Croc Box">
+    <nav>
+      <a href="pecaagora.html">PEÇA AGORA</a>
+      <a href="login.html">ENTRAR</a>
+      <a href="criarconta.html">CRIAR CONTA</a>
+      <a href="meuspedidos.html">MEUS PEDIDOS</a>
+      <a href="carrinho.html">CARRINHO</a>
+      <a href="perfil.html" class="active">PERFIL</a>
+      <button id="btn-tema" class="btn-tema" aria-label="Alternar Tema">
+          <svg class="icone-sol" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icone-lua" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+    </nav>
+  </header>
+
+  <section class="titulo-perfil-page">
+    <h1>MEU <span>PERFIL</span></h1>
+  </section>
+
+  <section class="secao-perfil">
+    <div class="perfil-container">
+      
+      <aside class="perfil-card-usuario">
+        <div class="perfil-avatar">
+          <span>MS</span>
+        </div>
+        <h2 class="perfil-nome">Mariana Souza</h2>
+        
+        <div class="perfil-stats">
+          <div class="stat-card">
+            <span class="stat-numero">12</span>
+            <span class="stat-label">Pedidos Feitos</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-numero">R$ 612</span>
+            <span class="stat-label">Em Crocância</span>
+          </div>
+        </div>
+
+        <p class="perfil-favorita">Box Favorita: <strong>Mega Box</strong></p>
+
+        <a href="login.html" class="btn-sair-conta">Sair da Conta</a>
+      </aside>
+
+      <main class="perfil-detalhes">
+        
+        <section class="perfil-card card-dados-pessoais">
+          <div class="card-header-perfil">
+            <h2>DADOS PESSOAIS</h2>
+            <button type="button" class="btn-perfil-acao">Editar</button>
+          </div>
+          
+          <form class="form-perfil" onsubmit="return false;">
+            <div class="campo-grupo">
+              <label for="nome-completo">Nome Completo</label>
+              <input type="text" id="nome-completo" value="Mariana Souza">
+            </div>
+
+            <div class="campos-linha-dupla">
+              <div class="campo-grupo">
+                <label for="email-perfil">E-Mail</label>
+                <input type="email" id="email-perfil" value="mariana@email.com">
+              </div>
+              <div class="campo-grupo">
+                <label for="telefone-perfil">Celular (WhatsApp)</label>
+                <input type="tel" id="telefone-perfil" value="(31) 99876-5432">
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section class="perfil-card card-enderecos">
+          <div class="card-header-perfil">
+            <h2>ENDEREÇOS</h2>
+            <button type="button" class="btn-perfil-acao">Novo Endereço</button>
+          </div>
+
+          <div class="lista-enderecos">
+            <div class="item-endereco">
+              <div class="endereco-topo">
+                <div class="endereco-identificacao">
+                  <h3>Casa</h3>
+                  <span class="badge-principal">Principal</span>
+                </div>
+                <a href="#" class="link-remover">Remover</a>
+              </div>
+              <p class="endereco-texto">Rua da Bahia, 13, Centro</p>
+            </div>
+
+            <div class="divisor-endereco"></div>
+
+            <div class="item-endereco">
+              <div class="endereco-topo">
+                <div class="endereco-identificacao">
+                  <h3>Trabalho</h3>
+                </div>
+                <div class="acoes-endereco">
+                  <a href="#" class="link-principal">Tornar Principal</a>
+                  <a href="#" class="link-remover">Remover</a>
+                </div>
+              </div>
+              <p class="endereco-texto">Av. Afonso Pena, 800, Funcionários</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="perfil-card card-contas">
+          <h2>CONTAS</h2>
+          <p class="descricao-contas">Excluir a conta apaga seus dados e o histórico de pedidos.</p>
+          <button type="button" class="btn-excluir-conta">Excluir minha conta</button>
+        </section>
+
+      </main>
+
+    </div>
+  </section>
+
+  <footer class="rodape rodape-carrinho">
+    <img src="logo-semfundo.png" alt="Logo Croc Box">
+    <p>Frango frito extra crocante. Delivery.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

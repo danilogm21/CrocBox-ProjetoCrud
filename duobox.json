@@ -1,0 +1,15 @@
+[
+    {
+        "usuario_id": 1,
+        "valor_Total": 44.90,
+        "status_Pedido": "Pendente",
+        "itens": [
+            {
+                "produtos_id": 2,
+                "nome_produto": "Duo Box",
+                "quantidadee": 1,
+                "preco_unidade": 44.90
+            }
+        ]
+    }
+]
