@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Peça seu lanche agora!</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo-semfundo.png" alt="">
+      <nav>
+        <div class="dropdown">
+          <a href="pecaagora.html" class="active">PEÇA AGORA</a>
+          <div class="dropdown-content">
+            <a href="#boxes">BOXES</a>
+            <a href="#box-mais-pedida">COMBO</a>
+            <a href="#delivery">DELIVERY</a>
+          </div>
+        </div>
+        <a href="login.html">ENTRAR</a>
+        <a href="criarconta.html">CRIAR CONTA</a>
+        <a href="meuspedidos.html">MEUS PEDIDOS</a>
+        <a href="carrinho.html">CARRINHO</a>
+        <a href="perfil.html">PERFIL</a>
+        <button id="btn-tema" class="btn-tema" aria-label="Alternar Tema">
+          <svg class="icone-sol" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="icone-lua" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+      </nav>
+  </header>
+
+  <section class="caixa-3d" id="caixa-3d">
+    <h1>CROC <span>BOX</span></h1>
+    <p>Tudo o que você ama, dentro de uma box.</p>
+    <div class="stage" id="stage" role="button" tabindex="0" aria-pressed="false" aria-label="Abrir ou fechar a caixa">
+      <div class="glow"></div>
+      <div class="shadow"></div>
+      <div class="float">
+        <div class="rig" id="rig">
+          <div class="box">
+            <div class="f kraft front">
+              <div class="print">
+                <div class="mark">CROC <b>BOX</b></div>
+                <div class="tag">Frango frito extra crocante</div>
+              </div>
+            </div>
+            <div class="f kraft back"></div>
+            <div class="f kraft right"></div>
+            <div class="f kraft left"></div>
+            <div class="f kraft bottom"></div>
+            <div class="f in in-back"></div>
+            <div class="f in in-left"></div>
+            <div class="f in-floor"></div>
+            <div class="lid">
+              <div class="lp">
+                <div class="f kraft"></div>
+                <div class="f lu"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="box-crocbox" id="box-crocbox">
+    <h1>Escolha sua BOX</h1>
+    <p>
+      Frango empanado na hora, batata rústica e molho à parte. <br> Do pedido pra uma pessoa ao pedido pra mesa toda.
+    </p>
+
+    <div class="busca-container-box">
+      <input type="text" id="input-busca" placeholder="O que você quer comer hoje? (ex: Solo Box, Mega...)">
+    </div>
+
+    <div class="container-boxes">
+      <div class="box1" id="boxes">
+        <img src="solo-box.jpg" alt="Solo Box">
+        <h2><span>Solo Box</span></h2>
+        <p>Tiras de frango crocantes, batata <br> rústica e 1 molho.</p>
+        <h2>R$ 24,90 <button type="button" onclick="window.location.href='pedir.html?box=solo'">Pedir</button></h2>
+      </div>
+      <div class="box2">
+        <img src="duo-box.jpg" alt="Duo Box">
+        <h2><span>Duo Box</span></h2>
+        <p>Coxas e sobrecoxas empanadas, <br> batata rústica e 2 molhos.</p>
+        <h2>R$ 44,90 <button type="button" onclick="window.location.href='pedir.html?box=duo'">Pedir</button></h2>
+      </div>
+      <div class="box3">
+        <img src="mega-box.jpg" alt="Mega Box">
+        <h2><span>Mega Box</span></h2>
+        <p>Frango pra dividir, batata rústica e <br> 4 molhos.</p>
+        <h2>R$ 79,90 <button type="button" onclick="window.location.href='pedir.html?box=mega'">Pedir</button></h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="box-mais-pedida" id="box-mais-pedida">
+    <img src="combo-crocbox.jpg" alt="Combo Burger Box">
+    <div class="info-mais-pedida">
+      <h1>Burger Box, o  <br>combo <span>mais <br> pedido</span></h1>
+      <p>Burger de frango crocante, queijo, tomate, <br> alface e molho da casa. Vem com batata e <br>refrigerante gelado.</p>
+      <h2>R$ 32,90 <button type="button" onclick="window.location.href='pedir.html?box=burguer'">Pedir</button></h2>
+    </div>
+  </section>
+
+  <section class="delivery" id="delivery">
+    <div class="caixa-abstrata">
+      <h1>Peça pelo delivery</h1>
+      <p>Escolha a box, mande o pedido pelo WhatsApp e receba <br> quentinho em casa.</p>
+      <button>Pedir no WhatsApp</button>
+    </div>
+  </section>
+
+  <footer class="rodape">
+    <img src="logo-semfundo.png" alt="">
+    <p>Frango frito extra crocante!</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
